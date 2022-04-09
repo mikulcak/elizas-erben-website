@@ -1,0 +1,16 @@
+---
+baseURL: http://elizas-erben.de
+disableHugoGeneratorInject: true
+languageCode: de-de
+layoutDir: layout
+metaDataFormat: yml
+pluralizeListTitles: false
+staticDir: assets
+taxonomies: false
+title: Elizas Erben
+# summaryLength: 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+...

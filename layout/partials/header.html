@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="de">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ .Title }}{{ if not .IsHome }} — {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}">
+    <meta name="author" content="Elizas Erben">
+
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    {{- if .Params.includes_code }}
+    <link rel="stylesheet" href="/styles/highlight.css">
+    {{- end }}
+  </head>
+
+  <body>
+
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <ul class="navbar-list">
+            <li class="navbar-item"><a class="navbar-link{{ if eq .RelPermalink "/" }} active{{ end }}" href="/">Über</a></li>
+            <li class="navbar-item"><a class="navbar-link{{ if eq .RelPermalink "/garten/" }} active{{ end }}" href="/garten/">Der Garten</a></li>
+            <li class="navbar-item"><a class="navbar-link{{ if eq .RelPermalink "/termine/" }} active{{ end }}" href="/termine/">Termine</a></li>
+            <!-- <li class="navbar-item"><a class="navbar-link{{ if eq .RelPermalink "/mitglied_werden/" }} active{{ end }}" href="/mitglied_werden/">Mitglied werden</a></li> -->
+            <li class="navbar-item"><a class="navbar-link{{ if eq .RelPermalink "/fotos/" }} active{{ end }}" href="/fotos/">Fotos</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
