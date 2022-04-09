@@ -1,3 +1,6 @@
 public/
 **/*.lock
 **/*.DS_Store
+
+# ignore upload script with user settings
+upload_elizas_erben.sh

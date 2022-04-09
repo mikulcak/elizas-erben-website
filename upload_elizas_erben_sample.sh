@@ -1,11 +1,12 @@
 #!/bin/bash
 HOST='host'
-USER='username'
+USER='user'
 PASS='password'
 TARGETFOLDER='/httpdocs'
-SOURCEFOLDER='public'
+WEBSITEFOLDER=$PWD
+SOURCEFOLDER=$WEBSITEFOLDER'/public'
 
-echo "Building static Hugo pages"
+echo "Building static Hugo pages into" $SOURCEFOLDER
 hugo
 
 echo "Uploading to web hoster"
